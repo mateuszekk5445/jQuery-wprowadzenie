@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateusz Barszcz</title>
+    <link rel="shortcut icon" href="khabib.jpg" type="image/x-icon">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #333;
+}
+
+section {
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #5c7cfa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4b69db;
+}
+
+#grzegorzbrzęczyszczykiewicz {
+    width: 100px;
+    height: 100px;
+    background-color: #5c7cfa;
+    margin: 20px auto;
+}
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //funkcja tekst
+            $('#guziktekst').click(function() {
+                $('#tekst').text('dzień dobry bracie');
+            });
+
+            //funkcja obrazek
+            $('#pokazO').click(function() {
+                $('#zdj').toggle();
+            });
+
+            //funkcja animacja
+            $('#anime').click(function() {
+                $('#grzegorzbrzęczyszczykiewicz').animate({
+                    width: '200px',
+                    height: '200px',
+                    opacity: 0.5
+                }, 1000).animate({
+                    width: '100px',
+                    height: '100px',
+                    opacity: 1
+                }, 1000);
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <h1>jQuery</h1>
+    </header>
+<br>
+    <section>
+        <!--zmiana tekstu-->
+        <button id="guziktekst">Przetłumacz</button>
+        <p id="tekst">صباح الخير يا أخي</p>
+<br>
+        <!--ukrywanie elementów-->
+        <button id="pokazO">Pokaż lub Ukryj obrazek</button>
+        <img id="zdj" src="khabib.jpg" alt="img" style="display:none;">
+<br>
+        <!--przyciskanimacji-->
+        <button id="anime">Animuj kwadrat</button>
+        <div id="grzegorzbrzęczyszczykiewicz"></div>
+    </section>
+</body>
+</html>
